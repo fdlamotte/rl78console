@@ -1,1 +1,4 @@
 This is a usb console to communicate with RL78/G14 RPB boards under Linux.
+
+See http://am.renesas.com/products/tools/introductory_evaluation_tools/renesas_demo_kits/yrpbrl78g14/index.jsp the board it has been made to work with.
+
