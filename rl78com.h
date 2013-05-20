@@ -25,6 +25,10 @@
 #define BULKOUT 0x02
 #define BULKIN 0x81
 
+
+#define rl78_write(h,s,l,t) (usb_bulk_write((h), BULKOUT, (s), (l), (t)))
+#define rl78_read(h,s,l,t) (usb_bulk_read((h), BULKIN, (s), (l), (t)))
+
 struct usb_dev_handle * find_rl78 ();
 
 void configure_rl78 (struct usb_dev_handle *myhandle);

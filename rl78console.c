@@ -64,10 +64,10 @@ int main(void)
 			if (FD_ISSET (fileno(stdin), &s_rd)) {
 				ch=getch();
 				if (ch != EOF && ch != CONTROL('d')) 
-					usb_bulk_write(myhandle, BULKOUT, &ch, 1, 100);
+					rl78_write(myhandle, &ch, 1, 100);
 			}
 
-			int ret = usb_bulk_read(myhandle, BULKIN, &ch2, 1, 50);
+			int ret = rl78_read(myhandle, &ch2, 1, 50);
 			if (ret >= 0) {
 				putchar (ch2);
 			} 
